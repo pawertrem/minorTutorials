@@ -1,0 +1,17 @@
+Package: minorTutorials
+Type: Package
+Title: A Collection of Diverse Datasets for HSE Minor Tutorials
+Version: 0.1.0
+Authors@R: 
+    person(given = "Pavel",
+           family = "Ivanov",
+           email = "paivanov_2@edu.hse.ru",
+           role = c("aut", "cre"))
+Description: A collection of real-world and illustrative datasets used for teaching, exploration, and testing data analysis techniques.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5.0)

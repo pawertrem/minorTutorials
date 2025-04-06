@@ -1,0 +1,15 @@
+files <- list.files("data", pattern = "\\.rda$", full.names = TRUE)
+
+for (file in files) {
+  name <- tools::file_path_sans_ext(basename(file))
+  load(file)  # загружается объект с именем name
+  obj <- get(name)
+  
+  if (is.data.frame(obj)) {
+    obj[] <- lapply(obj, function(x) {
+      if (is.character(x)) iconv(x, from = "", to = "UTF-8") else x
+    })
+    assign(name, obj)
+    save(list = name, file = file, version = 2)
+  }
+}
